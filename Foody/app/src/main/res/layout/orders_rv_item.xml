@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="@drawable/dark_cyan_rounded_box"
+    android:backgroundTint="@color/white"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/list_check"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:textSize="20sp"
+            android:fontFamily="@font/uf2_regular"
+            android:textColor="@color/cyan_regular"
+            android:text="Заказ выполнен"
+            android:gravity="bottom"
+            android:layout_marginLeft="15sp"/>
+
+        <TextView
+            android:id="@+id/orders_rv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:singleLine="true"
+            android:text="08.04.2006"
+            android:textSize="15sp"
+            android:textColor="@color/darker_cyan"
+            android:gravity="top"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/orders_rv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="149"
+        android:textStyle="bold"
+        android:textColor="@color/darker_cyan"
+        android:textSize="23sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="₽"
+        android:textStyle="bold"
+        android:textColor="@color/darker_cyan"
+        android:textSize="23sp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="20dp"/>
+</LinearLayout>

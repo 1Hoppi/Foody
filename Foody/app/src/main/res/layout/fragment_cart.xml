@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CartFragment"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_rounded_corners"
+        android:backgroundTint="@color/light_cyan">
+
+        <ImageButton
+            android:id="@+id/cart_exit_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/arrow_left"
+            android:backgroundTint="@color/transparent"
+            android:layout_gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Cart"
+            android:textSize="27sp"
+            android:textColor="@color/dark_cyan"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <Space
+            android:layout_width="65dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cart_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:foreground="@drawable/transparent_rim_horizontal"
+            android:foregroundTint="@color/cyan_regular"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="СУММА ЗАКАЗА"
+                android:textColor="@color/dark_cyan"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/dark_cyan"
+                android:backgroundTint="@color/dark_cyan"/>
+
+            <TextView
+                android:id="@+id/order_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/dark_cyan"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₽"
+                android:textColor="@color/dark_cyan"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cart_rv_place_order"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:backgroundTint="@color/dark_cyan"
+                app:icon="@drawable/cart"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                android:text="Place this order"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

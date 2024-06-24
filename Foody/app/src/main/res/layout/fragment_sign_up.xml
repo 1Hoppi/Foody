@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".SignUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:hint="Email"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            android:textColorHint="@color/dark_cyan">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:hint="Password"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            android:textColorHint="@color/dark_cyan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:hint="Repeat password"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            android:textColorHint="@color/dark_cyan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/repeat_password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/dark_cyan"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp"
+            app:rippleColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/error_text"
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/error_red"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</FrameLayout>

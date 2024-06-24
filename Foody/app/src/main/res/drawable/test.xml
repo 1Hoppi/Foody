@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background>
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="108dp"
+            android:height="108dp"
+            android:viewportWidth="900"
+            android:viewportHeight="900">
+            <group android:scaleX="0.74"
+                android:scaleY="0.74"
+                android:translateX="117"
+                android:translateY="117">
+
+                <path
+                    android:fillColor="#5CDB95"
+                    android:pathData="M 0 0 H 900 V 900 H 0 V 0 Z" />
+                <group
+                    android:translateX="435.39223892437644"
+                    android:translateY="446.2689572643207">
+                    <path
+                        android:fillColor="#379683"
+                        android:pathData="M183.1 -246.7C234 -215.1 269.7 -157.1 289.7 -94.4C309.7 -31.6 314.2 35.9 290.7 90.2C267.3 144.5 215.9 185.5 162.8 221.1C109.7 256.7 54.9 286.8 1.2 285.2C-52.5 283.6 -105 250.2 -148.4 211.5C-191.9 172.8 -226.2 128.7 -250.1 76.3C-273.9 23.9 -287.2 -36.9 -268.6 -85.1C-250 -133.4 -199.4 -169.1 -149.3 -201C-99.2 -232.9 -49.6 -260.9 8.3 -272.3C66.1 -283.7 132.3 -278.4 183.1 -246.7" />
+                </group>
+            </group>
+        </vector>
+    </background>
+    <foreground>
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="108dp"
+            android:height="108dp"
+            android:viewportWidth="69"
+            android:viewportHeight="162.98438">
+            <group android:scaleX="0.19474259"
+                android:scaleY="0.46"
+                android:translateX="27.781382"
+                android:translateY="44.005783">
+                <group android:translateY="129.44531">
+                    <path android:pathData="M45.703125,-50.765625L45.703125,-25.03125L36.21875,-25.03125L36.21875,-0L7.671875,-0L7.671875,-59.5625Q7.671875,-76.359375,18.03125,-87.359375Q28.40625,-98.375,44.15625,-98.375Q61.53125,-98.375,73.203125,-83.390625L49.78125,-66.3125Q47.8125,-71.796875,42.828125,-71.796875Q36.21875,-71.796875,36.21875,-62.65625L36.21875,-50.765625L45.703125,-50.765625Z"
+                        android:fillColor="#05386B"/>
+                </group>
+            </group>
+        </vector>
+    </foreground>
+</adaptive-icon>

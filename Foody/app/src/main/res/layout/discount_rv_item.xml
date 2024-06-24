@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/white_rounded_box"
+    android:backgroundTint="@color/light_cyan"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/default_product_rv_image"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/menu"
+            android:background="@color/light_gray"
+            android:layout_marginRight="10dp"
+            app:shapeAppearanceOverlay="@style/roundedImageView"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/white_rounded_box"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/default_product_rv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="0.7"
+                    android:text="Смартфон vivo"
+                    android:fontFamily="@font/uf2_regular"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/default_product_rv_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="169"
+                        android:textColor="@color/gray"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="гр"
+                        android:textColor="@color/gray"
+                        android:layout_gravity="right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/white_rounded_box"
+                android:backgroundTint="@color/light_gray"/>
+
+            <TextView
+                android:id="@+id/default_product_rv_price"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="149"
+                android:fontFamily="@font/uf2_regular"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:background="@drawable/red_rounded_box"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="₽"
+                android:textColor="@color/red"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

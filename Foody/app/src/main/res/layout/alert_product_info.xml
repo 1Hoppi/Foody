@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_background"
+    android:backgroundTint="@color/light_cyan"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="43dp"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="190dp"
+                android:layout_height="150dp"
+                android:background="@drawable/dark_cyan_rounded_box"
+                android:backgroundTint="@color/dark_cyan"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/alert_product_info_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/menu"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:id="@+id/alert_product_info_close"
+            android:layout_width="43dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/transparent"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/close" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/alert_product_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/uf2_regular"
+        android:text="Смартфон vivo"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/alert_product_info_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:text="Merchant ship convoy ON 92, en route to America from Britain, was detected by Wolfpack Hecht, a group of Nazi U-boats (submarines) patrolling the north Atlantic. Seven ships were sunk before the Wolfpack lost contact with them on May 13."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/alert_product_info_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="169"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:layout_gravity="right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="г"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dark_cyan_rounded_box"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alert_product_info_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:fontFamily="@font/uf2_regular"
+                android:gravity="end"
+                android:singleLine="true"
+                android:text="149"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:text="₽"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/dark_cyan_rounded_box"
+            android:backgroundTint="@color/cyan_regular"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/alert_event_info_remove"
+                android:layout_width="43dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                app:icon="@drawable/remove"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="30dp"
+                app:iconTint="@color/white"
+                app:rippleColor="@color/cyan_regular"
+                android:backgroundTint="@color/cyan_regular"/>
+
+            <TextView
+                android:id="@+id/alert_event_info_quantity"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/alert_event_info_add"
+                android:layout_width="43dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                app:icon="@drawable/add"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="30dp"
+                app:iconTint="@color/white"
+                app:rippleColor="@color/cyan_regular"
+                android:backgroundTint="@color/cyan_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

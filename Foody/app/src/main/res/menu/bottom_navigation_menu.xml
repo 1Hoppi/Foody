@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_gage"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/menu_page"
+        android:icon="@drawable/menu"
+        android:enabled="true"
+        android:title="Menu"/>
+    <item
+        android:id="@+id/orders_page"
+        android:enabled="true"
+        android:icon="@drawable/orders"
+        android:title="Orders"/>
+    <item
+        android:id="@+id/profile_page"
+        android:enabled="true"
+        android:icon="@drawable/profile"
+        android:title="Profile"/>
+</menu>

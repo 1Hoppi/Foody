@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/alert_background"
+    android:backgroundTint="@color/light_cyan">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="0.8"
+            android:layout_marginTop="15dp"
+            android:background="@color/dark_cyan"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/alert_event_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/uf2_regular"
+        android:text="In 1683, during the siege of Vienna, 140,000 soldiers of the Ottoman Empire were tearing the city's defences apart. They were driven away when a relief force, comprising the famed Winged Hussars of Poland, arrived to save the city."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="0.8"
+            android:layout_marginTop="15dp"
+            android:background="@color/dark_cyan"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/alert_event_info_close"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Принять"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dark_cyan"/>
+</LinearLayout>

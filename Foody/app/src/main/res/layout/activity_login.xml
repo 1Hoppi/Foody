@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@color/light_cyan"
+        android:src="@drawable/logo"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:background="@color/light_cyan"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/light_cyan_transition" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dark_cyan_transition"/>
+        <!--android:layout_weight="30"-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/dark_cyan"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_cyan"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/change_mode_button"
+            android:background="@color/transparent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+
+</LinearLayout>

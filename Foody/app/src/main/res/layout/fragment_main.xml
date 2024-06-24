@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_rounded_corners"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/logout"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:scaleX="-1"/>
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="43dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            app:iconPadding="0dp"
+            app:iconSize="22dp"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:icon="@drawable/notification"
+            android:backgroundTint="@color/dark_cyan"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/dark_cyan"
+            app:icon="@drawable/cart"
+            app:iconTint="@color/white"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/main_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:labelVisibilityMode="selected"
+        android:elevation="0dp"
+        app:itemRippleColor="@color/dark_cyan"
+        app:itemTextColor="@color/selector_item"
+        app:itemIconTint="@color/selector_item"
+        app:itemBackground="@drawable/top_rounded_corners"
+        app:itemIconSize="28dp"
+        android:background="@drawable/top_rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:menu="@menu/bottom_navigation_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</LinearLayout>
