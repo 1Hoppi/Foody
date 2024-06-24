@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="What's new?"
+        android:text="@string/whats_new"
         android:textStyle="bold"
         android:textSize="27sp"
         android:textColor="@color/white"

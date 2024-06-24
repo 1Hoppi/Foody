@@ -29,7 +29,7 @@
             android:textSize="20sp"
             android:fontFamily="@font/uf2_regular"
             android:textColor="@color/cyan_regular"
-            android:text="Заказ выполнен"
+            android:text="@string/order_completed"
             android:gravity="bottom"
             android:layout_marginLeft="15sp"/>
 
@@ -39,7 +39,6 @@
             android:layout_height="0dp"
             android:layout_weight="3"
             android:singleLine="true"
-            android:text="08.04.2006"
             android:textSize="15sp"
             android:textColor="@color/darker_cyan"
             android:gravity="top"
@@ -57,7 +56,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:singleLine="true"
-        android:text="149"
         android:textStyle="bold"
         android:textColor="@color/darker_cyan"
         android:textSize="23sp"/>
@@ -65,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="₽"
+        android:text="@string/russian_ruble"
         android:textStyle="bold"
         android:textColor="@color/darker_cyan"
         android:textSize="23sp"

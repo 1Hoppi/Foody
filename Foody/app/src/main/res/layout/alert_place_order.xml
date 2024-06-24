@@ -19,9 +19,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Оплатить"
+        android:text="@string/pay"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:backgroundTint="@color/dark_cyan"
         android:layout_gravity="center_horizontal"

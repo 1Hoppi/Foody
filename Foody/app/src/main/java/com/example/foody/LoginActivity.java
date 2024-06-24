@@ -20,9 +20,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //TEST
-        Intent newIntent = new Intent(this, MainActivity.class);
-        startActivity(newIntent);
+        ////TEST
+        //Intent newIntent = new Intent(this, MainActivity.class);
+        //startActivity(newIntent);
 
         if (getSupportFragmentManager().getBackStackEntryCount() > 0)
             getSupportFragmentManager().popBackStack();

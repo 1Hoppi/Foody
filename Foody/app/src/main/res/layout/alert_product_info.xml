@@ -62,7 +62,6 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/uf2_regular"
-        android:text="Смартфон vivo"
         android:textColor="@color/black"
         android:textSize="25sp" />
 
@@ -72,8 +71,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
         android:textSize="16sp"
-        android:textColor="@color/gray"
-        android:text="Merchant ship convoy ON 92, en route to America from Britain, was detected by Wolfpack Hecht, a group of Nazi U-boats (submarines) patrolling the north Atlantic. Seven ships were sunk before the Wolfpack lost contact with them on May 13."/>
+        android:textColor="@color/gray"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -91,7 +89,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
-            android:text="169"
             android:textSize="16sp"
             android:textColor="@color/gray"
             android:textStyle="bold"
@@ -100,7 +97,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="г"
+            android:text="@string/gram"
             android:textSize="16sp"
             android:textColor="@color/gray"
             android:textStyle="bold"/>
@@ -133,7 +130,6 @@
                 android:fontFamily="@font/uf2_regular"
                 android:gravity="end"
                 android:singleLine="true"
-                android:text="149"
                 android:textColor="@color/white"
                 android:textSize="28sp"
                 android:layout_gravity="center"/>
@@ -142,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="7dp"
-                android:text="₽"
+                android:text="@string/russian_ruble"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -190,13 +186,13 @@
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="3dp"
                 android:gravity="center"
                 android:singleLine="true"
-                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:text="@string/_0"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/alert_event_info_add"

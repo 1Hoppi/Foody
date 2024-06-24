@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo"
+            android:src="@drawable/cart"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/roundedImageView"
             android:background="@color/light_gray"/>
@@ -35,7 +35,6 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_marginTop="5dp"
-            android:text="Смартфон vivo"
             android:fontFamily="@font/uf2_regular"
             android:singleLine="true"
             android:textColor="@color/black"
@@ -54,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
-                android:text="149"
+                android:text="@string/_0"
                 android:textColor="@color/dark_cyan"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
@@ -64,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
-                android:text="₽"
+                android:text="@string/russian_ruble"
                 android:textColor="@color/dark_cyan"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
@@ -100,7 +99,7 @@
                 android:layout_marginRight="4dp"
                 android:gravity="center"
                 android:singleLine="true"
-                android:text="0"
+                android:text="@string/_0"
                 android:textColor="@color/cyan_regular"
                 android:textSize="25sp"
                 android:textStyle="bold" />
