@@ -4,15 +4,15 @@ GitHub source code: https://github.com/1Hoppi/Foody
 
 Documents on google drive:
 
-    Presentation (!)
-    APK File
-    Terms of reference (Specification)
+    -Presentation (!)
+    -APK File
+    -Terms of reference (Specification)
 
 Project descripstion:
 
-    A prototype of a mobile application for ordering food, containing all the necessary functionality.
-    DBMS for working with the database, as well as responding to requests from client devices
-    A secure database that stores all information about users, promotions and positions available for sale
+    -A prototype of a mobile application for ordering food, containing all the necessary functionality.
+    -DBMS for working with the database, as well as responding to requests from client devices
+    -A secure database that stores all information about users, promotions and positions available for sale
 
 Project has three-level architecture
 
