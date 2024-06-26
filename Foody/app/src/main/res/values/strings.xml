@@ -28,4 +28,7 @@
     <string name="repeat_password">Repeat password</string>
     <string name="order_completed">Заказ выполнен</string>
     <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Loading...</string>
 </resources>

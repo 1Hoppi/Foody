@@ -14,7 +14,9 @@ public class CartUpdater {
     static TextView orderPriceView;
     static OrdersRVAdapter ordersRVAdapter;
     static GridProductCardRVAdapter cartRVAdapter;
-    static SharedPreferences.Editor cartPreferencesEditor;
+    static DefaultProductRVAdapter discountRVAdapter;
+    static DefaultProductRVAdapter menuRVAdapter;
+    static ImageCarouselRVAdapter specialOffersRVAdapter;
 
     public static void updateCart() {
         ArrayList<HashMap> data = new ArrayList<>();
@@ -74,5 +76,19 @@ public class CartUpdater {
         counterView.setText("0");
 
         ordersRVAdapter.notifyDataSetChanged();
+    }
+
+    public static void updateMenu(ArrayList<HashMap> data) {
+        SavedData.menu = data;
+        discountRVAdapter.data = data;
+        menuRVAdapter.data = data;
+        discountRVAdapter.notifyDataSetChanged();
+        menuRVAdapter.notifyDataSetChanged();
+    }
+
+    public static void updateSpecialOffers(ArrayList<HashMap> data) {
+        SavedData.special_offers = data;
+        specialOffersRVAdapter.data = data;
+        specialOffersRVAdapter.notifyDataSetChanged();
     }
 }

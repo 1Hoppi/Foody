@@ -20,6 +20,8 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.HashMap;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -44,38 +46,81 @@ public class MainFragment extends Fragment {
         if (getFragmentManager().getBackStackEntryCount() > 0)
             getFragmentManager().popBackStack();
 
-        // Load data
-        ExecutorService executor = Executors.newSingleThreadExecutor();
+//        ExecutorService executor = Executors.newSingleThreadExecutor();
+//
+//        try {
+//            String urlRequest;
+//            Future<ArrayList> future;
+//            Networking.URLRequestToArrayListHashmap request;
+//
+//            // Menu
+//            urlRequest = String.format("http://%s/api/v1/menu", SavedData.ip);
+//            request = new Networking.URLRequestToArrayListHashmap(urlRequest);
+//            future = executor.submit(request);
+//            SavedData.menu = future.get();
+//            for (int i = 0; i < SavedData.menu.size(); i++)  {
+//                byte[] imageByteArray = Base64.getDecoder().decode((String)SavedData.menu.get(i).get("image"));
+//                SavedData.menu.get(i).put("image_bitmap", BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length));
+//                SavedData.menu.get(i).remove("image");
+//            }
+//
+//            // Special offers
+//            urlRequest = String.format("http://%s/api/v1/special-offers", SavedData.ip);
+//            request = new Networking.URLRequestToArrayListHashmap(urlRequest);
+//            future = executor.submit(request);
+//            SavedData.special_offers = future.get();
+//            for (int i = 0; i < SavedData.special_offers.size(); i++)  {
+//                byte[] imageByteArray = Base64.getDecoder().decode((String)SavedData.special_offers.get(i).get("image"));
+//                SavedData.special_offers.get(i).put("image_bitmap", BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length));
+//                SavedData.special_offers.get(i).remove("image");
+//            }
+//        } catch (Exception e) {
+//            Log.e("MainActivityException", e.toString());
+//        }
+        //NetworkingThread thread = new NetworkingThread();
+        //thread.start();
 
-        try {
-            String urlRequest;
-            Future<ArrayList> future;
-            Networking.URLRequestToArrayListHashmap request;
+        CompletableFuture<String> asyncFunction = CompletableFuture.supplyAsync(() -> {
+            try {
+                ExecutorService executor = Executors.newSingleThreadExecutor();
 
-            // Menu
-            urlRequest = String.format("http://%s/api/v1/menu", SavedData.ip);
-            request = new Networking.URLRequestToArrayListHashmap(urlRequest);
-            future = executor.submit(request);
-            SavedData.menu = future.get();
-            for (int i = 0; i < SavedData.menu.size(); i++)  {
-                byte[] imageByteArray = Base64.getDecoder().decode((String)SavedData.menu.get(i).get("image"));
-                SavedData.menu.get(i).put("image_bitmap", BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length));
-                SavedData.menu.get(i).remove("image");
+                String urlRequest;
+                Future<ArrayList> future;
+                Networking.URLRequestToArrayListHashmap request;
+
+                // Menu
+                urlRequest = String.format("http://%s/api/v1/menu", SavedData.ip);
+                request = new Networking.URLRequestToArrayListHashmap(urlRequest);
+                future = executor.submit(request);
+                ArrayList<HashMap> menu = future.get();
+                for (int i = 0; i < menu.size(); i++) {
+                    byte[] imageByteArray = Base64.getDecoder().decode((String) menu.get(i).get("image"));
+                    menu.get(i).put("image_bitmap", BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length));
+                    menu.get(i).remove("image");
+                }
+                mainActivity.runOnUiThread(() -> {
+                    CartUpdater.updateMenu(menu);
+                });
+
+                // Special offers
+                urlRequest = String.format("http://%s/api/v1/special-offers", SavedData.ip);
+                request = new Networking.URLRequestToArrayListHashmap(urlRequest);
+                future = executor.submit(request);
+                ArrayList<HashMap> special_offers = future.get();
+                for (int i = 0; i < special_offers.size(); i++)  {
+                    byte[] imageByteArray = Base64.getDecoder().decode((String)special_offers.get(i).get("image"));
+                    special_offers.get(i).put("image_bitmap", BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length));
+                    special_offers.get(i).remove("image");
+                }
+                mainActivity.runOnUiThread(() -> {
+                    CartUpdater.updateSpecialOffers(special_offers);
+                    mainActivity.changeFragment(mainActivity.mainFragment);
+                });
+            } catch (Exception e) {
+                Log.e("a", e.toString());
             }
-
-            // Special offers
-            urlRequest = String.format("http://%s/api/v1/special-offers", SavedData.ip);
-            request = new Networking.URLRequestToArrayListHashmap(urlRequest);
-            future = executor.submit(request);
-            SavedData.special_offers = future.get();
-            for (int i = 0; i < SavedData.special_offers.size(); i++)  {
-                byte[] imageByteArray = Base64.getDecoder().decode((String)SavedData.special_offers.get(i).get("image"));
-                SavedData.special_offers.get(i).put("image_bitmap", BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length));
-                SavedData.special_offers.get(i).remove("image");
-            }
-        } catch (Exception e) {
-            Log.e("MainActivityException", e.toString());
-        }
+            return "async result";
+        });
 
         // UI logic
         ImageButton logoutButton = view.findViewById(R.id.logout_button);

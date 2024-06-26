@@ -31,9 +31,11 @@ public class MenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
+        DefaultProductRVAdapter menuRVAdapter = new DefaultProductRVAdapter(SavedData.menu, getContext(), false, inflater);
         RecyclerView menuRV = view.findViewById(R.id.menu_rv);
         menuRV.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        menuRV.setAdapter(new DefaultProductRVAdapter(SavedData.menu, getContext(), false, inflater));
+        menuRV.setAdapter(menuRVAdapter);
+        CartUpdater.menuRVAdapter = menuRVAdapter;
 
         return view;
     }

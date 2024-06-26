@@ -10,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     MainFragment mainFragment;
     CartFragment cartFragment;
+    LoadingScreenFragment loadingScreenFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,18 +23,21 @@ public class MainActivity extends AppCompatActivity {
 
         mainFragment = new MainFragment(this);
         cartFragment = new CartFragment(this);
+        loadingScreenFragment = new LoadingScreenFragment();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.global_frame_layout, mainFragment);
         transaction.add(R.id.global_frame_layout, cartFragment);
+        transaction.add(R.id.global_frame_layout, loadingScreenFragment);
         transaction.commit();
-        changeFragment(mainFragment);
+        changeFragment(loadingScreenFragment);
     }
 
     public void changeFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.hide(mainFragment);
         transaction.hide(cartFragment);
+        transaction.hide(loadingScreenFragment);
         transaction.show(fragment);
         transaction.commit();
     }

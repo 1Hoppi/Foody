@@ -54,6 +54,7 @@
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
                 android:text="@string/_0"
+                android:fontFamily="@font/uf2_regular"
                 android:textColor="@color/dark_cyan"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
